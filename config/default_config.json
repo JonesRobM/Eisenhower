@@ -1,0 +1,41 @@
+{
+  "email": {
+    "smtp_server": "smtp.gmail.com",
+    "port": 587,
+    "username": "",
+    "password_env_var": "EISENHOWER_EMAIL_PASSWORD",
+    "from_name": "Eisenhower Matrix System"
+  },
+  "reminders": {
+    "sunday": "18:00",
+    "monday": "09:00",
+    "friday_summary": "17:00",
+    "timezone": "Europe/London"
+  },
+  "github": {
+    "token_env_var": "GITHUB_TOKEN",
+    "repo_env_var": "GITHUB_REPO",
+    "branch": "main",
+    "data_path": "weekly_matrices"
+  },
+  "categories": {
+    "predefined": ["research", "outreach", "skill-development", "wellbeing", "social"],
+    "auto_add_threshold": 3,
+    "clustering_min_samples": 5
+  },
+  "task_limits": {
+    "max_description_length": 200,
+    "max_notes_length": 500,
+    "incomplete_urgency_boost": true
+  },
+  "storage": {
+    "data_directory": "~/.eisenhower",
+    "backup_enabled": true,
+    "max_backup_weeks": 52
+  },
+  "nlp": {
+    "similarity_threshold": 0.75,
+    "clustering_algorithm": "dbscan",
+    "feature_extraction": "tfidf"
+  }
+}

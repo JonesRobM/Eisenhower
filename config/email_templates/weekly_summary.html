@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weekly Performance Summary</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #f8f9fa; padding: 20px; text-align: center; }
+        .metrics { display: flex; justify-content: space-around; margin: 20px 0; }
+        .metric { text-align: center; padding: 15px; }
+        .metric-value { font-size: 24px; font-weight: bold; color: #007bff; }
+        .quadrant-summary { margin: 15px 0; padding: 15px; background: #f8f9fa; }
+        .category-breakdown { margin: 15px 0; }
+        .footer { text-align: center; color: #666; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Week {{week_id}} Summary</h1>
+            <p>{{week_start_date}} to {{week_end_date}}</p>
+        </div>
+        
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">{{completion_rate}}%</div>
+                <div>Completion Rate</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">{{total_completed}}</div>
+                <div>Tasks Completed</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">{{total_added}}</div>
+                <div>Tasks Added</div>
+            </div>
+        </div>
+        
+        <div class="quadrant-summary">
+            <h3>Quadrant Performance</h3>
+            <ul>
+                <li><strong>Do First:</strong> {{do_first_completed}}/{{do_first_total}} completed ({{do_first_rate}}%)</li>
+                <li><strong>Schedule:</strong> {{schedule_completed}}/{{schedule_total}} completed ({{schedule_rate}}%)</li>
+                <li><strong>Delegate:</strong> {{delegate_completed}}/{{delegate_total}} completed ({{delegate_rate}}%)</li>
+                <li><strong>Eliminate:</strong> {{eliminate_completed}}/{{eliminate_total}} completed ({{eliminate_rate}}%)</li>
+            </ul>
+        </div>
+        
+        <div class="category-breakdown">
+            <h3>Category Breakdown</h3>
+            {{#categories}}
+            <p><strong>{{name}}:</strong> {{completed}}/{{total}} completed ({{rate}}%)</p>
+            {{/categories}}
+        </div>
+        
+        {{#insights}}
+        <div class="insights">
+            <h3>Weekly Insights</h3>
+            <ul>
+                {{#insights}}
+                <li>{{.}}</li>
+                {{/insights}}
+            </ul>
+        </div>
+        {{/insights}}
+        
+        <div class="footer">
+            <p>Data archived to GitHub repository: {{github_repo}}</p>
+            <p>Automated summary from your Eisenhower Matrix System</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+You are analysing task descriptions to identify natural groupings and suggest appropriate category names.
+
+Task descriptions:
+{{task_descriptions}}
+
+Current categories:
+{{current_categories}}
+
+Instructions:
+1. Group similar tasks based on semantic meaning and context
+2. Suggest concise, professional category names for new groups
+3. Only suggest new categories if there are at least {{min_samples}} similar tasks
+4. Use lowercase, hyphenated naming convention (e.g., "skill-development")
+5. Avoid overly specific categories that won't generalise
+
+Output format:
+{
+  "suggested_categories": [
+    {
+      "name": "category-name",
+      "tasks": ["task1", "task2", ...],
+      "rationale": "Brief explanation of grouping"
+    }
+  ]
+}

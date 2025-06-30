@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "*.dbclient-js": "javascript",
+        "atomic": "cpp",
+        "cctype": "cpp",
+        "chrono": "cpp",
+        "cmath": "cpp",
+        "compare": "cpp",
+        "cstdint": "cpp",
+        "forward_list": "cpp",
+        "istream": "cpp",
+        "string": "cpp",
+        "system_error": "cpp",
+        "xstring": "cpp"
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weekly Planning Reminder</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #f4f4f4; padding: 20px; text-align: center; }
+        .content { padding: 20px 0; }
+        .quadrant { margin: 10px 0; padding: 10px; border-left: 4px solid #007bff; }
+        .footer { text-align: center; color: #666; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Weekly Planning Time</h1>
+            <p>Week of {{week_start_date}}</p>
+        </div>
+        
+        <div class="content">
+            <p>Time to create your Eisenhower Matrix for the upcoming week.</p>
+            
+            <h3>Remember the Quadrants:</h3>
+            <div class="quadrant">
+                <strong>Urgent + Important:</strong> Do First - Crisis management, deadline-driven tasks
+            </div>
+            <div class="quadrant">
+                <strong>Not Urgent + Important:</strong> Schedule - Strategic work, planning, skill development
+            </div>
+            <div class="quadrant">
+                <strong>Urgent + Not Important:</strong> Delegate - Interruptions, some emails, non-essential meetings
+            </div>
+            <div class="quadrant">
+                <strong>Not Urgent + Not Important:</strong> Eliminate - Time wasters, excessive social media, trivial activities
+            </div>
+            
+            <p><strong>Action:</strong> Run your Eisenhower Matrix application and plan your week.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Automated reminder from your Eisenhower Matrix System</p>
+        </div>
+    </div>
+</body>
+</html>
